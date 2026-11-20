@@ -1,0 +1,28 @@
+[project]
+name = "vlm-adversarial"
+version = "0.1.0"
+description = "CS 553: Exploring adversarial attacks against vision-language models"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "accelerate>=1.16.0",
+    "bitsandbytes>=0.50.2",
+    "bitsandbytes>=0.50.2 ; sys_platform == 'linux'",
+    "datasets>=5.2.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "open-clip-torch>=4.2.2",
+    "pandas>=3.1.1",
+    "pillow>=13.0.0",
+    "pycocoevalcap>=1.2",
+    "pyyaml>=6.0.3",
+    "torch>=2.15.0",
+    "transformers>=5.23.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
